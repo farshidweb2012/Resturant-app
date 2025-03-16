@@ -10,6 +10,13 @@ body {
   font-family: "Outfit", serif;
 }
 a {
-  color: #71e6e6;
   text-decoration: none;
+}
+ @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

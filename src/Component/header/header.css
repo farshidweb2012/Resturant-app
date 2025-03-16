@@ -1,0 +1,39 @@
+.header {
+  padding: 2rem;
+  
+  margin:  3rem 5rem;
+
+  height: 30rem;
+  background: url("../../Shop_Asset/haeder-back.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+.header-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+  padding: 2rem;
+  animation: fadeIn 2s;
+}
+.header h2 {
+  font-weight: 500;
+  color: #fff;
+  font-size: 3rem;
+}
+.header p {
+  width: 60%;
+  color: #fff;
+}
+.header-btn {
+  padding: 0.6rem 1.7rem;
+  border: 1px solid tomato;
+  border-radius: 50px;
+  background: #fff;
+  color: blueviolet;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: inline-block;
+  width: 10rem;
+}

@@ -12,7 +12,33 @@
    display: flex;
    justify-content: center;
    align-items: center;
+   gap: 1.3rem;
+   font-size: 1.1rem;
+}
+.active{
+   border-bottom: 1px solid black;
+   padding: .6rem;
 }
 .nav-menu li{
-  
+  color: rgb(12, 8, 16);
+  cursor: pointer;
+  &:hover{
+   opacity: .8;
+  }
+}
+.navbar-search-login{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+   font-size: 1.4rem;
+}
+.nav-btn{
+   padding: .6rem  1.7rem;
+   border: 1px solid tomato;
+   border-radius: 50px;
+   background: transparent;
+   color: blueviolet;
+   font-size: 1.3rem;
+   cursor: pointer;
 }
