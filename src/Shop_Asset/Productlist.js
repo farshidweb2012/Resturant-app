@@ -5,14 +5,14 @@ import image4 from "./Product-list/Pastry-Desesrt.jpg"
   export  const foodList = [
   {
     id: 1,
-    name: "chocolate hazelnut dessert",
+    name: "Hazelnut dessert",
     price: 12,
     image: image1,
     catagory: "Dessert",
   },
   {
     id: 2,
-    name: "chocolate Cake",
+    name: "ChocolateCake",
     price: 10,
     image: image2,
     catagory: "Cake",

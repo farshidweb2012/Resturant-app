@@ -13,14 +13,15 @@ const FoodItem = ({ id, name, price, image, category }) => {
     <div className='fooditem'>
       <div className='foodtem-image-container'>
         <img className='fooditem-image' src={image} alt={name} />
-
       </div>
+      
+     <div className='fooditem-icon'>
+      +
+     </div>
       <div className='fooditem-info'>
         <div className='fooditem-info'>
-          <p className='fooditem-info-name'>{name}</p>
-
+          <h3 className='fooditem-info-name'>{name}</h3>
         </div>
-
         <p className='fooditem-info-price'>${price}</p>
 
       </div>
