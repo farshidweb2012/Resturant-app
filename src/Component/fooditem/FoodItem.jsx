@@ -4,6 +4,7 @@ import './fooditem.css';
 
 
 
+
 const FoodItem = ({ id, name, price, image, category }) => {
 
 
