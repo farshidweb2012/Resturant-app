@@ -12,10 +12,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/palceorder" element={<PlaceOrders /> } />
+        <Route path="/palceorder" element={<PlaceOrders />} />
       </Routes>
     </div>
   );
 }
-
-

@@ -4,23 +4,25 @@ import { foodList } from "../Shop_Asset/Productlist";
 export const StoredContext = createContext(null);
 
 const StoredContextProvider = (props) => {
-
   const [cartItem, setCartItem] = useState({});
 
   const addToCart = (itemid) => {
     if (!cartItem[itemid]) {
-      setCartItem((prev) => ({ ...prev, [itemid]: 1 }))
+      setCartItem((prev) => ({ ...prev, [itemid]: 1 }));
+    } else {
+      setCartItem((prev) => ({ ...prev, [itemid]: prev[itemid] + 1 }));
     }
-    else {
-      setCartItem((prev) => ({...prev,[itemid]:prev[itemid]+1}))
-    }
-  }
-
-
+  };
+  const removFromCart = (itemid) => {
+    setCartItem((prev) => ({ ...prev, [itemid]: prev[itemid] - 1 }));
+  };
 
   const contextValue = {
     foodList,
-    addToCart
+    cartItem,
+    setCartItem,
+    addToCart,
+    removFromCart,
   };
   return (
     <StoredContext.Provider value={contextValue}>
@@ -30,7 +32,4 @@ const StoredContextProvider = (props) => {
 };
 export default StoredContextProvider;
 
-
 /////
-
-
