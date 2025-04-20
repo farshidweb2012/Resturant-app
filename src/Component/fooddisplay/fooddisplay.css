@@ -1,22 +1,20 @@
 .food-display {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2rem;
-    background-color: rgb(172, 224, 138);
-    padding: 2rem;
-    border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  background-color: rgb(172, 224, 138);
+  padding: 2rem;
+  border: 2px solid black;
 }
 
 .food-display h2 {
-    font-size: max(2vw, 24px);
-    text-align: center;
+  font-size: max(2vw, 24px);
+  text-align: center;
 }
 
-.food-displaylist {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 1rem;
-
+.food-display-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
 }
-    

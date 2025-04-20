@@ -1,5 +1,1 @@
-const cat=[
-    "Cake",
-    "Dessert",
-    "Hamburger"
-]
+const cat = ["Cake", "Dessert", "Hamburger"];

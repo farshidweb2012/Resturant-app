@@ -16,47 +16,37 @@ const FoodItem = ({ id, name, price, image, category }) => {
       <div className="foodtem-image-container">
         <img className="fooditem-image" src={image} alt={name} />
       </div>
-      <div className="fooditem-icon">
-        {!cartItem[id] ? (
+
+      {!cartItem[id] ? (
+        <FontAwesomeIcon
+          onClick={() => addToCart(id)}
+          icon={faPlus}
+          className="first-icon"
+        />
+      ) : (
+        <div className="item-counter-icon-afterClick">
           <FontAwesomeIcon
+            className="mines-icon"
+            onClick={() => removFromCart(id)}
+            icon={faSubtract}
+          />
+          <p style={{ fontSize: "1.5rem" }}>{cartItem[id]}</p>
+          <FontAwesomeIcon
+            className="plus-icon"
             onClick={() => addToCart(id)}
             icon={faPlus}
-            size="2x"
-            className="icon"
-          
           />
-        ) : (
-          <div className="item-counter-icon-afterClick">
-            <FontAwesomeIcon
-              className="mines-icon"
-              onClick={() => removFromCart(id)}
-              icon={faSubtract}
-              size="2x"
-              color="red"
-            />
-            <p style={{ fontSize: "1.5rem" }}>{cartItem[id]}</p>
-            <FontAwesomeIcon
-              className="plus-icon"
-              onClick={() => addToCart(id)}
-              icon={faPlus}
-              size="2x"
-              color="green"
-            />
-          </div>
-        )}
-      </div>
+        </div>
+      )}
+
       <div className="fooditem-info">
         <div className="fooditem-info">
           <h3 className="fooditem-info-name">{name}</h3>
         </div>
-        <p className="fooditem-info-price">${price}</p>
+        <h3 className="fooditem-info-price">${price}</h3>
       </div>
     </div>
   );
 };
 
-
-
 export default FoodItem;
-
-

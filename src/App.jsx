@@ -5,6 +5,7 @@ import Home from "./pages/home/Home";
 import Cart from "./pages/cart/Cart";
 import Navbar from "./Component/navbar/Navbar";
 import PlaceOrders from "./pages/placeorders/PlaceOrders";
+import { Footer } from "./Component/footer/Footer";
 export default function App() {
   return (
     <div>
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/palceorder" element={<PlaceOrders />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
