@@ -8,6 +8,9 @@ import { StoredContext } from "../../context/StoreContext";
 const FoodItem = ({ id, name, price, image, category }) => {
   const { cartItem, addToCart, removFromCart } = useContext(StoredContext);
 
+  console.log(cartItem[id]);
+  console.log(cartItem[name]);
+
   return (
     <div className="fooditem">
       <div className="foodtem-image-container">
@@ -16,24 +19,25 @@ const FoodItem = ({ id, name, price, image, category }) => {
       <div className="fooditem-icon">
         {!cartItem[id] ? (
           <FontAwesomeIcon
-            onClick={(id) => addToCart(id)}
+            onClick={() => addToCart(id)}
             icon={faPlus}
             size="2x"
             className="icon"
+          
           />
         ) : (
-          <div className="item-counter-icon">
+          <div className="item-counter-icon-afterClick">
             <FontAwesomeIcon
               className="mines-icon"
-              onClick={(id) => removFromCart(id)}
+              onClick={() => removFromCart(id)}
               icon={faSubtract}
               size="2x"
               color="red"
             />
-            <p style={{ fontSize: "1.5rem" }}>{cartItem}</p>
+            <p style={{ fontSize: "1.5rem" }}>{cartItem[id]}</p>
             <FontAwesomeIcon
               className="plus-icon"
-              onClick={(id) => addToCart(id)}
+              onClick={() => addToCart(id)}
               icon={faPlus}
               size="2x"
               color="green"
@@ -43,7 +47,7 @@ const FoodItem = ({ id, name, price, image, category }) => {
       </div>
       <div className="fooditem-info">
         <div className="fooditem-info">
-          ّ<h3 className="fooditem-info-name">{name}</h3>
+          <h3 className="fooditem-info-name">{name}</h3>
         </div>
         <p className="fooditem-info-price">${price}</p>
       </div>
@@ -51,4 +55,8 @@ const FoodItem = ({ id, name, price, image, category }) => {
   );
 };
 
+
+
 export default FoodItem;
+
+

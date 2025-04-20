@@ -13,6 +13,9 @@ const StoredContextProvider = (props) => {
       setCartItem((prev) => ({ ...prev, [itemid]: prev[itemid] + 1 }));
     }
   };
+
+  console.log(cartItem);
+
   const removFromCart = (itemid) => {
     setCartItem((prev) => ({ ...prev, [itemid]: prev[itemid] - 1 }));
   };
