@@ -1,0 +1,27 @@
+.appdownlaod {
+  display: flex;
+  flex-direction: column;
+  padding: 6rem;
+  margin: auto auto;
+}
+.appdownlaod h1 {
+  text-align: center;
+  font-size: 3.5rem;
+}
+.download-app-icon {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+.download-app-icon-icon {
+  background-color: red;
+  display: inline-block;
+
+  cursor: pointer;
+  transition: transform 0.4s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
