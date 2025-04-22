@@ -4,43 +4,50 @@ import "./navbar.css";
 import logo from "../../Shop_Asset/logo.avif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faCartFlatbed } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("home");
   return (
     <div className="navbar">
       <img className="nav-logo" src={logo} alt="logo" />
       <ul className="nav-menu">
-        <li
+        <Link
+          to="/"
           onClick={() => setMenu("home")}
           className={menu === "home" ? "active" : ""}
         >
           home{" "}
-        </li>
-        <li
+        </Link>
+        <a
+          href="#explore-menu"
           onClick={() => setMenu("menu")}
           className={menu === "menu" ? "active" : ""}
         >
           menu
-        </li>
-        <li
+        </a>
+        <a
+          href="#app-downlaod"
           onClick={() => setMenu("mobile-app")}
           className={menu === "mobile-app" ? "active" : ""}
         >
           mobile-app
-        </li>
-        <li
+        </a>
+        <a
+          href="#footer"
           onClick={() => setMenu("contact-us")}
           className={menu === "contact-us" ? "active" : ""}
         >
           contact-us
-        </li>
+        </a>
       </ul>
       <div className="navbar-search-login">
         <FontAwesomeIcon className="nav-search" icon={faSearch} />
 
         <FontAwesomeIcon className="nav-cart" icon={faCartFlatbed} />
-        <button className="nav-btn">signin</button>
+        <button onClick={() => setShowLogin(true)} className="nav-btn">
+          signin
+        </button>
       </div>
     </div>
   );
