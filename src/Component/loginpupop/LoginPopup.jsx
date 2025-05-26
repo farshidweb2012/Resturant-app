@@ -5,7 +5,7 @@ import { faClose } from "@fortawesome/free-solid-svg-icons";
 
 export const LoginPopup = ({ setShowLogin }) => {
   const [currentState, setCurrentState] = useState("Login");
-
+  
   return (
     <div className="popup-login">
       <div className="popup-login-title">
@@ -23,7 +23,7 @@ export const LoginPopup = ({ setShowLogin }) => {
           ) : (
             " "
           )}
-
+         
           <input type="email" placeholder="Your email" required />
           <input type="password" placeholder="Password" required />
           <button>
@@ -32,6 +32,7 @@ export const LoginPopup = ({ setShowLogin }) => {
         </div>
         <div className="popup-login-text">
           <p>
+            {setCurrentState(false)}
             {currentState === "Login" ? (
               <p>
                 Create an account<span>Click here</span>

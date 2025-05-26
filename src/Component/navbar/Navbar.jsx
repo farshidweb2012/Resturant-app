@@ -3,14 +3,14 @@ import "./navbar.css";
 
 import logo from "../../Shop_Asset/logo.avif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faCartFlatbed } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("home");
   return (
     <div className="navbar">
-      <img className="nav-logo" src={logo} alt="logo" />
+    <Link to='/'>  <img className="nav-logo" src={logo} alt="logo" /></Link>
       <ul className="nav-menu">
         <Link
           to="/"
@@ -44,7 +44,7 @@ const Navbar = ({ setShowLogin }) => {
       <div className="navbar-search-login">
         <FontAwesomeIcon className="nav-search" icon={faSearch} />
 
-        <FontAwesomeIcon className="nav-cart" icon={faCartFlatbed} />
+       <Link to='/cart'> <FontAwesomeIcon className="nav-cart" icon={faCartShopping} /></Link>
         <button onClick={() => setShowLogin(true)} className="nav-btn">
           signin
         </button>
