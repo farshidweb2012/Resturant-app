@@ -1,3 +1,32 @@
 .cart{
-    background-color: red;
+     padding: 10rem;
+   
+}
+.cart-items-title{
+     
+     display: grid;
+     grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+     align-items: center;
+     font-size: max(1vw,12px);
+     padding: 0.5rem;
+   
+}
+.cart-item-item{
+   color: gray;
+   margin: 10px 0;
+}
+ 
+
+.remove-from-cart{
+     display: inline-block;
+     border: none;
+     width: 5rem;
+     height: 3rem;
+     color: aliceblue;
+     background-color: blueviolet;
+     border-radius: 2px; 
+     cursor: pointer;
+}
+.remove-from-cart:hover{
+  opacity: 0.8;    
 }
